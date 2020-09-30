@@ -23,7 +23,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "arrival",
     "stopIndex",
     "stopSequence",
-    "boardAlightType"
+    "boardAlightType",
+    "platformCode",
 })
 public class From implements Serializable
 {
@@ -50,6 +51,8 @@ public class From implements Serializable
     private Long stopSequence;
     @JsonProperty("boardAlightType")
     private String boardAlightType;
+    @JsonProperty("platformCode")
+    private String platformCode;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = -2524610495946268451L;
@@ -162,6 +165,16 @@ public class From implements Serializable
     @JsonProperty("boardAlightType")
     public void setBoardAlightType(String boardAlightType) {
         this.boardAlightType = boardAlightType;
+    }
+
+    @JsonProperty("platformCode")
+    public String getPlatformCode() {
+        return platformCode;
+    }
+
+    @JsonProperty("platformCode")
+    public void setPlatformCode(String platformCode) {
+        this.platformCode = platformCode;
     }
 
     @JsonAnyGetter
