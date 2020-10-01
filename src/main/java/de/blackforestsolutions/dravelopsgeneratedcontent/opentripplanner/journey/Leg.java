@@ -1,16 +1,12 @@
 
 package de.blackforestsolutions.dravelopsgeneratedcontent.opentripplanner.journey;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -71,9 +67,9 @@ public class Leg implements Serializable
     @JsonProperty("interlineWithPreviousLeg")
     private Boolean interlineWithPreviousLeg;
     @JsonProperty("from")
-    private From from;
+    private Stop from;
     @JsonProperty("to")
-    private To to;
+    private Stop to;
     @JsonProperty("legGeometry")
     private LegGeometry legGeometry;
     @JsonProperty("rentedBike")
@@ -85,7 +81,7 @@ public class Leg implements Serializable
     @JsonProperty("transitLeg")
     private Boolean transitLeg;
     @JsonProperty("intermediateStops")
-    private List<IntermediateStop> intermediateStops = null;
+    private List<Stop> intermediateStops = null;
     @JsonProperty("steps")
     private List<Step> steps = null;
     @JsonProperty("agencyName")
@@ -223,22 +219,22 @@ public class Leg implements Serializable
     }
 
     @JsonProperty("from")
-    public From getFrom() {
+    public Stop getFrom() {
         return from;
     }
 
     @JsonProperty("from")
-    public void setFrom(From from) {
+    public void setFrom(Stop from) {
         this.from = from;
     }
 
     @JsonProperty("to")
-    public To getTo() {
+    public Stop getTo() {
         return to;
     }
 
     @JsonProperty("to")
-    public void setTo(To to) {
+    public void setTo(Stop to) {
         this.to = to;
     }
 
@@ -293,12 +289,12 @@ public class Leg implements Serializable
     }
 
     @JsonProperty("intermediateStops")
-    public List<IntermediateStop> getIntermediateStops() {
+    public List<Stop> getIntermediateStops() {
         return intermediateStops;
     }
 
     @JsonProperty("intermediateStops")
-    public void setIntermediateStops(List<IntermediateStop> intermediateStops) {
+    public void setIntermediateStops(List<Stop> intermediateStops) {
         this.intermediateStops = intermediateStops;
     }
 

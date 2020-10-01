@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "price",
     "routes"
 })
-public class Regular_ implements Serializable
+public class FareComponent implements Serializable
 {
 
     @JsonProperty("fareId")

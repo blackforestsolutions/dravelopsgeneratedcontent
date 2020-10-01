@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "currency",
     "cents"
 })
-public class Regular implements Serializable
+public class Money implements Serializable
 {
 
     @JsonProperty("currency")
