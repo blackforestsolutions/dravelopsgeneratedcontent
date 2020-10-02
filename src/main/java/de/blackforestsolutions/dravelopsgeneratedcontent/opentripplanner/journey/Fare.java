@@ -1,23 +1,19 @@
 
 package de.blackforestsolutions.dravelopsgeneratedcontent.opentripplanner.journey;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "fare",
-    "details"
+        "fare",
+        "details"
 })
-public class Fare implements Serializable
-{
+public class Fare implements Serializable {
 
     public static enum FareType implements Serializable {
         regular, student, senior, tram, special, youth
@@ -27,9 +23,9 @@ public class Fare implements Serializable
      * A mapping from {@link FareType} to {@link Money}.
      */
     @JsonProperty("fare")
-    public Map<FareType, Money> fare;
+    private LinkedHashMap<FareType, Money> fare;
     @JsonProperty("details")
-    private Map<FareType, FareComponent>  details;
+    private LinkedHashMap<FareType, FareComponent> details;
 
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -41,17 +37,17 @@ public class Fare implements Serializable
     }
 
     @JsonProperty("fare")
-    public void setFare(Map<FareType, Money> fare) {
+    public void setFare(LinkedHashMap<FareType, Money> fare) {
         this.fare = fare;
     }
 
     @JsonProperty("details")
-    public Map<FareType, FareComponent> getDetails() {
+    public LinkedHashMap<FareType, FareComponent> getDetails() {
         return details;
     }
 
     @JsonProperty("details")
-    public void setDetails(Map<FareType, FareComponent> details) {
+    public void setDetails(LinkedHashMap<FareType, FareComponent> details) {
         this.details = details;
     }
 
