@@ -32,7 +32,7 @@ public class Fare implements Serializable {
     private final static long serialVersionUID = -8675794110634376341L;
 
     @JsonProperty("fare")
-    public Map<FareType, Money> getFare() {
+    public LinkedHashMap<FareType, Money> getFare() {
         return fare;
     }
 
