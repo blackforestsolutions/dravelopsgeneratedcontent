@@ -25,7 +25,7 @@ public class Fare implements Serializable {
     @JsonProperty("fare")
     private LinkedHashMap<FareType, Money> fare;
     @JsonProperty("details")
-    private LinkedHashMap<FareType, FareComponent> details;
+    private LinkedHashMap<FareType, FareComponent[]> details;
 
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -42,12 +42,12 @@ public class Fare implements Serializable {
     }
 
     @JsonProperty("details")
-    public LinkedHashMap<FareType, FareComponent> getDetails() {
+    public LinkedHashMap<FareType, FareComponent[]> getDetails() {
         return details;
     }
 
     @JsonProperty("details")
-    public void setDetails(LinkedHashMap<FareType, FareComponent> details) {
+    public void setDetails(LinkedHashMap<FareType, FareComponent[]> details) {
         this.details = details;
     }
 
