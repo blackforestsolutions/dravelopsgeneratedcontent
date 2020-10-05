@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "requestParameters",
     "plan",
+    "error",
     "debugOutput",
     "elevationMetadata"
 })
@@ -25,6 +26,8 @@ public class OpenTripPlannerJourneyResponse implements Serializable
     private RequestParameters requestParameters;
     @JsonProperty("plan")
     private Plan plan;
+    @JsonProperty("error")
+    private Error error;
     @JsonProperty("debugOutput")
     private DebugOutput debugOutput;
     @JsonProperty("elevationMetadata")
@@ -51,6 +54,16 @@ public class OpenTripPlannerJourneyResponse implements Serializable
     @JsonProperty("plan")
     public void setPlan(Plan plan) {
         this.plan = plan;
+    }
+
+    @JsonProperty("error")
+    public Error getError() {
+        return error;
+    }
+
+    @JsonProperty("error")
+    public void setError(Error error) {
+        this.error = error;
     }
 
     @JsonProperty("debugOutput")
