@@ -1,4 +1,4 @@
-name: Java CICD & publish package
+name: Java CI
 
 on:
   push:
