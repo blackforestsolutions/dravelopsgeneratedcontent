@@ -10,6 +10,8 @@
         "locality": "Furtwangen im Schwarzwald",
         "admin": "Furtwangen im Schwarzwald, Deut"
       },
+      "point.lat": 48.128923,
+      "point.lon": 8.674534,
       "size": 10,
       "layers": [
         "venue",
