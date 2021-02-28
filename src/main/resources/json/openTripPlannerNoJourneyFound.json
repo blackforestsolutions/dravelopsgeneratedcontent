@@ -2,7 +2,6 @@
   "requestParameters": {
     "date": "09-30-2020",
     "arriveBy": "false",
-    "optimize": "QUICK",
     "fromPlace": "48.04832,8.209972",
     "toPlace": "52.509439,13.4096",
     "time": "13:00",

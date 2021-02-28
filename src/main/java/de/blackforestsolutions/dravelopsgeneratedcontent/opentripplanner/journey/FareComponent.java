@@ -22,42 +22,42 @@ public class FareComponent implements Serializable
 {
 
     @JsonProperty("fareId")
-    private String fareId;
+    private FareId fareId;
     @JsonProperty("price")
-    private Price price;
+    private Money price;
     @JsonProperty("routes")
-    private List<String> routes = null;
+    private List<FareId> routes = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = -2724975380429903312L;
 
     @JsonProperty("fareId")
-    public String getFareId() {
+    public FareId getFareId() {
         return fareId;
     }
 
     @JsonProperty("fareId")
-    public void setFareId(String fareId) {
+    public void setFareId(FareId fareId) {
         this.fareId = fareId;
     }
 
     @JsonProperty("price")
-    public Price getPrice() {
+    public Money getPrice() {
         return price;
     }
 
     @JsonProperty("price")
-    public void setPrice(Price price) {
+    public void setPrice(Money price) {
         this.price = price;
     }
 
     @JsonProperty("routes")
-    public List<String> getRoutes() {
+    public List<FareId> getRoutes() {
         return routes;
     }
 
     @JsonProperty("routes")
-    public void setRoutes(List<String> routes) {
+    public void setRoutes(List<FareId> routes) {
         this.routes = routes;
     }
 

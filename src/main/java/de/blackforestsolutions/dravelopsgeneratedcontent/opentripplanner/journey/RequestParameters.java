@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "date",
     "arriveBy",
-    "optimize",
     "fromPlace",
     "toPlace",
     "time",
@@ -28,8 +27,6 @@ public class RequestParameters implements Serializable
     private String date;
     @JsonProperty("arriveBy")
     private String arriveBy;
-    @JsonProperty("optimize")
-    private String optimize;
     @JsonProperty("fromPlace")
     private String fromPlace;
     @JsonProperty("toPlace")
@@ -60,16 +57,6 @@ public class RequestParameters implements Serializable
     @JsonProperty("arriveBy")
     public void setArriveBy(String arriveBy) {
         this.arriveBy = arriveBy;
-    }
-
-    @JsonProperty("optimize")
-    public String getOptimize() {
-        return optimize;
-    }
-
-    @JsonProperty("optimize")
-    public void setOptimize(String optimize) {
-        this.optimize = optimize;
     }
 
     @JsonProperty("fromPlace")
