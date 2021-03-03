@@ -51,7 +51,7 @@ public class Step implements Serializable
     @JsonProperty("lat")
     private Double lat;
     @JsonProperty("elevation")
-    private List<String> elevation = null;
+    private String elevation = null;
     @JsonProperty("alerts")
     private List<Alert> alerts = null;
     @JsonIgnore
@@ -159,12 +159,12 @@ public class Step implements Serializable
     }
 
     @JsonProperty("elevation")
-    public List<String> getElevation() {
+    public String getElevation() {
         return elevation;
     }
 
     @JsonProperty("elevation")
-    public void setElevation(List<String> elevation) {
+    public void setElevation(String elevation) {
         this.elevation = elevation;
     }
 
