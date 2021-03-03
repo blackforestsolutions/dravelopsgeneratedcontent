@@ -2,9 +2,9 @@
   "requestParameters": {
     "date": "09-30-2020",
     "arriveBy": "false",
-    "optimize": "QUICK",
     "fromPlace": "48.048320,8.209972",
     "toPlace": "48.088204,7.950507\n",
+    "searchWindow": "1000",
     "time": "13:00",
     "locale": "de"
   },
@@ -137,7 +137,7 @@
                 "bogusName": false,
                 "lon": 8.210010375305611,
                 "lat": 48.048340289920255,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 350.073,
@@ -149,7 +149,7 @@
                 "bogusName": true,
                 "lon": 8.208427,
                 "lat": 48.048346900000006,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 101.693,
@@ -161,7 +161,7 @@
                 "bogusName": false,
                 "lon": 8.2039258,
                 "lat": 48.047521100000004,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 187.02800000000002,
@@ -173,7 +173,7 @@
                 "bogusName": false,
                 "lon": 8.202655100000001,
                 "lat": 48.047182500000005,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 218.58300000000003,
@@ -185,7 +185,29 @@
                 "bogusName": false,
                 "lon": 8.201638,
                 "lat": 48.048698400000006,
-                "elevation": []
+                "elevation": "",
+                "alerts": [
+                  {
+                    "alertHeaderText": "ungepflasterte Oberfläche"
+                  }
+                ]
+              }
+            ],
+            "alerts": [
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
               }
             ]
           },
@@ -405,7 +427,7 @@
                 "bogusName": false,
                 "lon": 7.95293959362364,
                 "lat": 48.090477331892,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 89.202,
@@ -417,7 +439,7 @@
                 "bogusName": true,
                 "lon": 7.952065200000001,
                 "lat": 48.090344200000004,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 110.231,
@@ -429,7 +451,7 @@
                 "bogusName": false,
                 "lon": 7.951626200000001,
                 "lat": 48.089829900000005,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 131.266,
@@ -441,7 +463,7 @@
                 "bogusName": false,
                 "lon": 7.951876400000001,
                 "lat": 48.0888531,
-                "elevation": []
+                "elevation": ""
               },
               {
                 "distance": 47.774,
@@ -453,7 +475,24 @@
                 "bogusName": false,
                 "lon": 7.950171500000001,
                 "lat": 48.088571800000004,
-                "elevation": []
+                "elevation": ""
+              }
+            ],
+            "alerts": [
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
+              },
+              {
+                "alertHeaderText": "ungepflasterte Oberfläche"
               }
             ]
           }
@@ -462,23 +501,24 @@
       }
     ]
   },
+  "metadata": {
+    "searchWindowUsed": 1000,
+    "nextDateTime": 1614601000000,
+    "prevDateTime": 1614599000000
+  },
   "debugOutput": {
-    "precalculationTime": 39,
-    "pathCalculationTime": 995,
-    "pathTimes": [
-      47,
-      107,
-      98,
-      112,
-      124,
-      100,
-      116,
-      94,
-      145
-    ],
-    "renderingTime": 22,
-    "totalTime": 1056,
-    "timedOut": true
+    "precalculationTime": 0,
+    "directStreetRouterTime": 57,
+    "transitRouterTime": 105,
+    "filteringTime": 0,
+    "renderingTime": 1,
+    "totalTime": 163,
+    "transitRouterTimes": {
+      "tripPatternFilterTime": 14,
+      "accessEgressTime": 9,
+      "raptorSearchTime": 68,
+      "itineraryCreationTime": 14
+    }
   },
   "elevationMetadata": {
     "ellipsoidToGeoidDifference": 34.78946858125849,

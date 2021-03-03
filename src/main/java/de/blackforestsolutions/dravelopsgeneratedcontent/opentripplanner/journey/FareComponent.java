@@ -24,7 +24,7 @@ public class FareComponent implements Serializable
     @JsonProperty("fareId")
     private String fareId;
     @JsonProperty("price")
-    private Price price;
+    private Money price;
     @JsonProperty("routes")
     private List<String> routes = null;
     @JsonIgnore
@@ -42,12 +42,12 @@ public class FareComponent implements Serializable
     }
 
     @JsonProperty("price")
-    public Price getPrice() {
+    public Money getPrice() {
         return price;
     }
 
     @JsonProperty("price")
-    public void setPrice(Price price) {
+    public void setPrice(Money price) {
         this.price = price;
     }
 

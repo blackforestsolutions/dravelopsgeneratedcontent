@@ -18,12 +18,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "relativeDirection",
     "streetName",
     "absoluteDirection",
+    "exit",
     "stayOn",
     "area",
     "bogusName",
     "lon",
     "lat",
-    "elevation"
+    "elevation",
+    "alerts"
 })
 public class Step implements Serializable
 {
@@ -36,6 +38,8 @@ public class Step implements Serializable
     private String streetName;
     @JsonProperty("absoluteDirection")
     private String absoluteDirection;
+    @JsonProperty("exit")
+    private String exit;
     @JsonProperty("stayOn")
     private Boolean stayOn;
     @JsonProperty("area")
@@ -47,7 +51,9 @@ public class Step implements Serializable
     @JsonProperty("lat")
     private Double lat;
     @JsonProperty("elevation")
-    private List<Object> elevation = null;
+    private String elevation = null;
+    @JsonProperty("alerts")
+    private List<Alert> alerts = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = -3665191465199133652L;
@@ -90,6 +96,16 @@ public class Step implements Serializable
     @JsonProperty("absoluteDirection")
     public void setAbsoluteDirection(String absoluteDirection) {
         this.absoluteDirection = absoluteDirection;
+    }
+
+    @JsonProperty("exit")
+    public String getExit() {
+        return exit;
+    }
+
+    @JsonProperty("exit")
+    public void setExit(String exit) {
+        this.exit = exit;
     }
 
     @JsonProperty("stayOn")
@@ -143,13 +159,23 @@ public class Step implements Serializable
     }
 
     @JsonProperty("elevation")
-    public List<Object> getElevation() {
+    public String getElevation() {
         return elevation;
     }
 
     @JsonProperty("elevation")
-    public void setElevation(List<Object> elevation) {
+    public void setElevation(String elevation) {
         this.elevation = elevation;
+    }
+
+    @JsonProperty("alerts")
+    public List<Alert> getAlerts() {
+        return alerts;
+    }
+
+    @JsonProperty("alerts")
+    public void setAlerts(List<Alert> alerts) {
+        this.alerts = alerts;
     }
 
     @JsonAnyGetter

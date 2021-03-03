@@ -3,7 +3,6 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.opentripplanner.journe
 
 import java.io.Serializable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -14,31 +13,34 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "precalculationTime",
-    "pathCalculationTime",
-    "pathTimes",
-    "renderingTime",
-    "totalTime",
-    "timedOut"
+        "precalculationTime",
+        "directStreetRouterTime",
+        "transitRouterTime",
+        "filteringTime",
+        "renderingTime",
+        "totalTime",
+        "transitRouterTimes"
 })
 public class DebugOutput implements Serializable
 {
 
     @JsonProperty("precalculationTime")
     private Long precalculationTime;
-    @JsonProperty("pathCalculationTime")
-    private Long pathCalculationTime;
-    @JsonProperty("pathTimes")
-    private List<Long> pathTimes = null;
+    @JsonProperty("directStreetRouterTime")
+    private Long directStreetRouterTime;
+    @JsonProperty("transitRouterTime")
+    private Long transitRouterTime;
+    @JsonProperty("filteringTime")
+    private Long filteringTime;
     @JsonProperty("renderingTime")
     private Long renderingTime;
     @JsonProperty("totalTime")
     private Long totalTime;
-    @JsonProperty("timedOut")
-    private Boolean timedOut;
+    @JsonProperty("transitRouterTimes")
+    private TransitRouterTimes transitRouterTimes;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-    private final static long serialVersionUID = 2610944185371409550L;
+    private final static long serialVersionUID = 6294274198791813116L;
 
     @JsonProperty("precalculationTime")
     public Long getPrecalculationTime() {
@@ -50,24 +52,34 @@ public class DebugOutput implements Serializable
         this.precalculationTime = precalculationTime;
     }
 
-    @JsonProperty("pathCalculationTime")
-    public Long getPathCalculationTime() {
-        return pathCalculationTime;
+    @JsonProperty("directStreetRouterTime")
+    public Long getDirectStreetRouterTime() {
+        return directStreetRouterTime;
     }
 
-    @JsonProperty("pathCalculationTime")
-    public void setPathCalculationTime(Long pathCalculationTime) {
-        this.pathCalculationTime = pathCalculationTime;
+    @JsonProperty("directStreetRouterTime")
+    public void setDirectStreetRouterTime(Long directStreetRouterTime) {
+        this.directStreetRouterTime = directStreetRouterTime;
     }
 
-    @JsonProperty("pathTimes")
-    public List<Long> getPathTimes() {
-        return pathTimes;
+    @JsonProperty("transitRouterTime")
+    public Long getTransitRouterTime() {
+        return transitRouterTime;
     }
 
-    @JsonProperty("pathTimes")
-    public void setPathTimes(List<Long> pathTimes) {
-        this.pathTimes = pathTimes;
+    @JsonProperty("transitRouterTime")
+    public void setTransitRouterTime(Long transitRouterTime) {
+        this.transitRouterTime = transitRouterTime;
+    }
+
+    @JsonProperty("filteringTime")
+    public Long getFilteringTime() {
+        return filteringTime;
+    }
+
+    @JsonProperty("filteringTime")
+    public void setFilteringTime(Long filteringTime) {
+        this.filteringTime = filteringTime;
     }
 
     @JsonProperty("renderingTime")
@@ -90,14 +102,14 @@ public class DebugOutput implements Serializable
         this.totalTime = totalTime;
     }
 
-    @JsonProperty("timedOut")
-    public Boolean getTimedOut() {
-        return timedOut;
+    @JsonProperty("transitRouterTimes")
+    public TransitRouterTimes getTransitRouterTimes() {
+        return transitRouterTimes;
     }
 
-    @JsonProperty("timedOut")
-    public void setTimedOut(Boolean timedOut) {
-        this.timedOut = timedOut;
+    @JsonProperty("transitRouterTimes")
+    public void setTransitRouterTimes(TransitRouterTimes transitRouterTimes) {
+        this.transitRouterTimes = transitRouterTimes;
     }
 
     @JsonAnyGetter

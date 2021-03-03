@@ -15,15 +15,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "name",
     "stopId",
+    "stopCode",
+    "platformCode",
     "lon",
     "lat",
     "arrival",
     "departure",
+    "orig",
+    "zoneId",
     "stopIndex",
     "stopSequence",
     "vertexType",
-    "boardAlightType",
-    "platformCode",
+    "bikeShareId",
 })
 public class Stop implements Serializable
 {
@@ -32,6 +35,10 @@ public class Stop implements Serializable
     private String name;
     @JsonProperty("stopId")
     private String stopId;
+    @JsonProperty("stopCode")
+    private String stopCode;
+    @JsonProperty("platformCode")
+    private String platformCode;
     @JsonProperty("lon")
     private Double lon;
     @JsonProperty("lat")
@@ -40,16 +47,18 @@ public class Stop implements Serializable
     private Long arrival;
     @JsonProperty("departure")
     private Long departure;
+    @JsonProperty("orig")
+    private String orig;
+    @JsonProperty("zoneId")
+    private String zoneId;
     @JsonProperty("stopIndex")
     private Long stopIndex;
     @JsonProperty("stopSequence")
     private Long stopSequence;
     @JsonProperty("vertexType")
     private String vertexType;
-    @JsonProperty("boardAlightType")
-    private String boardAlightType;
-    @JsonProperty("platformCode")
-    private String platformCode;
+    @JsonProperty("bikeShareId")
+    private String bikeShareId;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = -3002475775460683642L;
@@ -72,6 +81,26 @@ public class Stop implements Serializable
     @JsonProperty("stopId")
     public void setStopId(String stopId) {
         this.stopId = stopId;
+    }
+
+    @JsonProperty("stopCode")
+    public String getStopCode() {
+        return stopCode;
+    }
+
+    @JsonProperty("stopCode")
+    public void setStopCode(String stopCode) {
+        this.stopCode = stopCode;
+    }
+
+    @JsonProperty("platformCode")
+    public String getPlatformCode() {
+        return platformCode;
+    }
+
+    @JsonProperty("platformCode")
+    public void setPlatformCode(String platformCode) {
+        this.platformCode = platformCode;
     }
 
     @JsonProperty("lon")
@@ -114,6 +143,26 @@ public class Stop implements Serializable
         this.departure = departure;
     }
 
+    @JsonProperty("orig")
+    public String getOrig() {
+        return orig;
+    }
+
+    @JsonProperty("orig")
+    public void setOrig(String orig) {
+        this.orig = orig;
+    }
+
+    @JsonProperty("zoneId")
+    public String getZoneId() {
+        return zoneId;
+    }
+
+    @JsonProperty("zoneId")
+    public void setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+    }
+
     @JsonProperty("stopIndex")
     public Long getStopIndex() {
         return stopIndex;
@@ -144,24 +193,14 @@ public class Stop implements Serializable
         this.vertexType = vertexType;
     }
 
-    @JsonProperty("boardAlightType")
-    public String getBoardAlightType() {
-        return boardAlightType;
+    @JsonProperty("bikeShareId")
+    public String getBikeShareId() {
+        return bikeShareId;
     }
 
-    @JsonProperty("boardAlightType")
-    public void setBoardAlightType(String boardAlightType) {
-        this.boardAlightType = boardAlightType;
-    }
-
-    @JsonProperty("platformCode")
-    public String getPlatformCode() {
-        return platformCode;
-    }
-
-    @JsonProperty("platformCode")
-    public void setPlatformCode(String platformCode) {
-        this.platformCode = platformCode;
+    @JsonProperty("bikeShareId")
+    public void setBikeShareId(String bikeShareId) {
+        this.bikeShareId = bikeShareId;
     }
 
     @JsonAnyGetter
