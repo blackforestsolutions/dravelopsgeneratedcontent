@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "points",
+    "levels",
     "length"
 })
 public class LegGeometry implements Serializable
@@ -21,6 +22,8 @@ public class LegGeometry implements Serializable
 
     @JsonProperty("points")
     private String points;
+    @JsonProperty("levels")
+    private String levels;
     @JsonProperty("length")
     private Long length;
     @JsonIgnore
@@ -35,6 +38,16 @@ public class LegGeometry implements Serializable
     @JsonProperty("points")
     public void setPoints(String points) {
         this.points = points;
+    }
+
+    @JsonProperty("levels")
+    public String getLevels() {
+        return levels;
+    }
+
+    @JsonProperty("levels")
+    public void setLevels(String levels) {
+        this.levels = levels;
     }
 
     @JsonProperty("length")

@@ -3,6 +3,7 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.opentripplanner.journe
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -16,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "id",
     "msg",
     "message",
-    "noPath"
+    "missing"
 })
 public class Error implements Serializable
 {
@@ -27,8 +28,8 @@ public class Error implements Serializable
     private String msg;
     @JsonProperty("message")
     private String message;
-    @JsonProperty("noPath")
-    private Boolean noPath;
+    @JsonProperty("missing")
+    private List<String> missing;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 3842685776936290983L;
@@ -63,14 +64,14 @@ public class Error implements Serializable
         this.message = message;
     }
 
-    @JsonProperty("noPath")
-    public Boolean getNoPath() {
-        return noPath;
+    @JsonProperty("missing")
+    public List<String> getMissing() {
+        return missing;
     }
 
-    @JsonProperty("noPath")
-    public void setNoPath(Boolean noPath) {
-        this.noPath = noPath;
+    @JsonProperty("missing")
+    public void setMissing(List<String> missing) {
+        this.missing = missing;
     }
 
     @JsonAnyGetter

@@ -25,7 +25,6 @@ import java.util.Map;
     "to",
     "legGeometry",
     "rentedBike",
-    "flexDrtAdvanceBookMin",
     "duration",
     "transitLeg",
     "intermediateStops",
@@ -39,7 +38,17 @@ import java.util.Map;
     "tripId",
     "serviceDate",
     "routeShortName",
-    "routeLongName"
+    "routeLongName",
+    "isNonExactFrequency",
+    "headway",
+    "routeColor",
+    "routeTextColor",
+    "tripShortName",
+    "tripBlockId",
+    "routeBrandingUrl",
+    "alerts",
+    "boardRule",
+    "alightRule"
 })
 public class Leg implements Serializable
 {
@@ -74,8 +83,6 @@ public class Leg implements Serializable
     private LegGeometry legGeometry;
     @JsonProperty("rentedBike")
     private Boolean rentedBike;
-    @JsonProperty("flexDrtAdvanceBookMin")
-    private Double flexDrtAdvanceBookMin;
     @JsonProperty("duration")
     private Double duration;
     @JsonProperty("transitLeg")
@@ -104,6 +111,26 @@ public class Leg implements Serializable
     private String routeShortName;
     @JsonProperty("routeLongName")
     private String routeLongName;
+    @JsonProperty("isNonExactFrequency")
+    private Boolean isNonExactFrequency;
+    @JsonProperty("headway")
+    private Long headway;
+    @JsonProperty("routeColor")
+    private String routeColor;
+    @JsonProperty("routeTextColor")
+    private String routeTextColor;
+    @JsonProperty("tripShortName")
+    private String tripShortName;
+    @JsonProperty("tripBlockId")
+    private String tripBlockId;
+    @JsonProperty("routeBrandingUrl")
+    private String routeBrandingUrl;
+    @JsonProperty("alerts")
+    private List<Alert> alerts = null;
+    @JsonProperty("boardRule")
+    private String boardRule;
+    @JsonProperty("alightRule")
+    private String alightRule;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 7185650652432758669L;
@@ -258,16 +285,6 @@ public class Leg implements Serializable
         this.rentedBike = rentedBike;
     }
 
-    @JsonProperty("flexDrtAdvanceBookMin")
-    public Double getFlexDrtAdvanceBookMin() {
-        return flexDrtAdvanceBookMin;
-    }
-
-    @JsonProperty("flexDrtAdvanceBookMin")
-    public void setFlexDrtAdvanceBookMin(Double flexDrtAdvanceBookMin) {
-        this.flexDrtAdvanceBookMin = flexDrtAdvanceBookMin;
-    }
-
     @JsonProperty("duration")
     public Double getDuration() {
         return duration;
@@ -406,6 +423,106 @@ public class Leg implements Serializable
     @JsonProperty("routeLongName")
     public void setRouteLongName(String routeLongName) {
         this.routeLongName = routeLongName;
+    }
+
+    @JsonProperty("isNonExactFrequency")
+    public Boolean getNonExactFrequency() {
+        return isNonExactFrequency;
+    }
+
+    @JsonProperty("isNonExactFrequency")
+    public void setNonExactFrequency(Boolean nonExactFrequency) {
+        isNonExactFrequency = nonExactFrequency;
+    }
+
+    @JsonProperty("headway")
+    public Long getHeadway() {
+        return headway;
+    }
+
+    @JsonProperty("headway")
+    public void setHeadway(Long headway) {
+        this.headway = headway;
+    }
+
+    @JsonProperty("routeColor")
+    public String getRouteColor() {
+        return routeColor;
+    }
+
+    @JsonProperty("routeColor")
+    public void setRouteColor(String routeColor) {
+        this.routeColor = routeColor;
+    }
+
+    @JsonProperty("routeTextColor")
+    public String getRouteTextColor() {
+        return routeTextColor;
+    }
+
+    @JsonProperty("routeTextColor")
+    public void setRouteTextColor(String routeTextColor) {
+        this.routeTextColor = routeTextColor;
+    }
+
+    @JsonProperty("tripShortName")
+    public String getTripShortName() {
+        return tripShortName;
+    }
+
+    @JsonProperty("tripShortName")
+    public void setTripShortName(String tripShortName) {
+        this.tripShortName = tripShortName;
+    }
+
+    @JsonProperty("tripBlockId")
+    public String getTripBlockId() {
+        return tripBlockId;
+    }
+
+    @JsonProperty("tripBlockId")
+    public void setTripBlockId(String tripBlockId) {
+        this.tripBlockId = tripBlockId;
+    }
+
+    @JsonProperty("routeBrandingUrl")
+    public String getRouteBrandingUrl() {
+        return routeBrandingUrl;
+    }
+
+    @JsonProperty("routeBrandingUrl")
+    public void setRouteBrandingUrl(String routeBrandingUrl) {
+        this.routeBrandingUrl = routeBrandingUrl;
+    }
+
+    @JsonProperty("alerts")
+    public List<Alert> getAlerts() {
+        return alerts;
+    }
+
+    @JsonProperty("alerts")
+    public void setAlerts(List<Alert> alerts) {
+        this.alerts = alerts;
+    }
+
+    @JsonProperty("boardRule")
+    public String getBoardRule() {
+        return boardRule;
+    }
+
+    @JsonProperty("boardRule")
+    public void setBoardRule(String boardRule) {
+        this.boardRule = boardRule;
+    }
+
+    @JsonProperty("alightRule")
+    public String getAlightRule() {
+        return alightRule;
+    }
+
+    @JsonProperty("alightRule")
+    public void setAlightRule(String alightRule) {
+        this.alightRule = alightRule;
     }
 
     @JsonAnyGetter

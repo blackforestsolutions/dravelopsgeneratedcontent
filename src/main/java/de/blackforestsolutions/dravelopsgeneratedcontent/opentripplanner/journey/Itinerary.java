@@ -27,6 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "transfers",
     "fare",
     "legs",
+    "systemNotices",
     "tooSloped"
 })
 public class Itinerary implements Serializable
@@ -58,6 +59,8 @@ public class Itinerary implements Serializable
     private Fare fare;
     @JsonProperty("legs")
     private List<Leg> legs = null;
+    @JsonProperty("systemNotices")
+    private List<SystemNotice> systemNotices = null;
     @JsonProperty("tooSloped")
     private Boolean tooSloped;
     @JsonIgnore
@@ -192,6 +195,16 @@ public class Itinerary implements Serializable
     @JsonProperty("legs")
     public void setLegs(List<Leg> legs) {
         this.legs = legs;
+    }
+
+    @JsonProperty("systemNotices")
+    public List<SystemNotice> getSystemNotices() {
+        return systemNotices;
+    }
+
+    @JsonProperty("systemNotices")
+    public void setSystemNotices(List<SystemNotice> systemNotices) {
+        this.systemNotices = systemNotices;
     }
 
     @JsonProperty("tooSloped")

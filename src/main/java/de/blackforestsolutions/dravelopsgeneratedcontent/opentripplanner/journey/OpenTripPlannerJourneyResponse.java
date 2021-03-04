@@ -4,6 +4,7 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.opentripplanner.journe
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -15,17 +16,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "requestParameters",
     "plan",
+    "metadata",
     "error",
     "debugOutput",
     "elevationMetadata"
 })
-public class OpenTripPlannerJourneyResponse implements Serializable
-{
+public class OpenTripPlannerJourneyResponse implements Serializable {
 
     @JsonProperty("requestParameters")
     private RequestParameters requestParameters;
     @JsonProperty("plan")
     private Plan plan;
+    @JsonProperty("metadata")
+    private Metadata metadata;
     @JsonProperty("error")
     private Error error;
     @JsonProperty("debugOutput")
@@ -54,6 +57,16 @@ public class OpenTripPlannerJourneyResponse implements Serializable
     @JsonProperty("plan")
     public void setPlan(Plan plan) {
         this.plan = plan;
+    }
+
+    @JsonProperty("metadata")
+    public Metadata getMetadata() {
+        return metadata;
+    }
+
+    @JsonProperty("metadata")
+    public void setMetadata(Metadata metadata) {
+        this.metadata = metadata;
     }
 
     @JsonProperty("error")
