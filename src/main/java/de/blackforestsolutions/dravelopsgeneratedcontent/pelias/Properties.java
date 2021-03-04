@@ -65,7 +65,7 @@ public class Properties implements Serializable
     @JsonProperty("postalcode")
     private String postalcode;
     @JsonProperty("distance")
-    private Long distance;
+    private Double distance;
     @JsonProperty("accuracy")
     private String accuracy;
     @JsonProperty("country")
@@ -103,7 +103,7 @@ public class Properties implements Serializable
     @JsonProperty("addendum")
     private Addendum addendum;
     @JsonProperty("confidence")
-    private Long confidence;
+    private Double confidence;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = -730234706084197350L;
@@ -199,12 +199,12 @@ public class Properties implements Serializable
     }
 
     @JsonProperty("distance")
-    public Long getDistance() {
+    public Double getDistance() {
         return distance;
     }
 
     @JsonProperty("distance")
-    public void setDistance(Long distance) {
+    public void setDistance(Double distance) {
         this.distance = distance;
     }
 
@@ -389,12 +389,12 @@ public class Properties implements Serializable
     }
 
     @JsonProperty("confidence")
-    public Long getConfidence() {
+    public Double getConfidence() {
         return confidence;
     }
 
     @JsonProperty("confidence")
-    public void setConfidence(Long confidence) {
+    public void setConfidence(Double confidence) {
         this.confidence = confidence;
     }
 

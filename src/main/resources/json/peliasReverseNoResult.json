@@ -1,0 +1,57 @@
+{
+  "geocoding": {
+    "version": "0.2",
+    "attribution": "http://localhost:4000/attribution",
+    "query": {
+      "layers": [
+        "venue",
+        "address",
+        "street",
+        "country",
+        "macroregion",
+        "region",
+        "macrocounty",
+        "county",
+        "locality",
+        "localadmin",
+        "borough",
+        "neighbourhood",
+        "continent",
+        "empire",
+        "dependency",
+        "macrohood",
+        "microhood",
+        "disputed",
+        "postalcode",
+        "ocean",
+        "marinearea"
+      ],
+      "size": 10,
+      "private": false,
+      "point.lat": 0,
+      "point.lon": 0,
+      "boundary.circle.radius": 1,
+      "boundary.circle.lat": 0,
+      "boundary.circle.lon": 0,
+      "lang": {
+        "name": "German",
+        "iso6391": "de",
+        "iso6393": "deu",
+        "via": "querystring",
+        "defaulted": false
+      },
+      "querySize": 20
+    },
+    "warnings": [
+      "boundary.circle.radius is not applicable for coarse reverse"
+    ],
+    "engine": {
+      "name": "Pelias",
+      "author": "Mapzen",
+      "version": "1.0"
+    },
+    "timestamp": 1614782697845
+  },
+  "type": "FeatureCollection",
+  "features": []
+}
