@@ -2,7 +2,6 @@
 package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,7 +33,7 @@ public class JourneyVariables implements Serializable {
     @JsonProperty("arrivalLongitude")
     private Double arrivalLongitude;
     @JsonProperty("dateTime")
-    private ZonedDateTime dateTime;
+    private String dateTime;
     @JsonProperty("isArrivalDateTime")
     private Boolean isArrivalDateTime;
     @JsonProperty("language")
@@ -84,12 +83,12 @@ public class JourneyVariables implements Serializable {
     }
 
     @JsonProperty("dateTime")
-    public ZonedDateTime getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
     @JsonProperty("dateTime")
-    public void setDateTime(ZonedDateTime dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 
