@@ -2,7 +2,6 @@
 package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import java.io.Serializable;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
