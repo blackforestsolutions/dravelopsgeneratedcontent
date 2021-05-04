@@ -15,6 +15,8 @@ public class GraphQLApiConfig implements Serializable{
 
     @JsonProperty("graphql")
     private Graphql graphql;
+    @JsonProperty("sha")
+    private String sha;
     @JsonIgnore
     private final Map<String, Object> additionalProperties = new HashMap<>();
     private final static long serialVersionUID = - 8595616181418124189L;
