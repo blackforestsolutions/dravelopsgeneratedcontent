@@ -9,7 +9,8 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "graphql"
+        "graphql",
+        "sha"
 })
 public class GraphQLApiConfig implements Serializable{
 
@@ -30,6 +31,17 @@ public class GraphQLApiConfig implements Serializable{
     public void setGraphql(Graphql graphql) {
         this.graphql = graphql;
     }
+
+    @JsonProperty("sha")
+    public String getSha(){
+        return sha;
+    }
+
+    @JsonProperty("sha")
+    public void setSha(String sha){
+        this.sha = sha;
+    }
+
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
