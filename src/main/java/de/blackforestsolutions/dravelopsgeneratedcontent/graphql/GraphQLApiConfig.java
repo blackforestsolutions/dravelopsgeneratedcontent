@@ -10,29 +10,19 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "graphql",
-        "sha"
+        "sha",
+        "graphql"
 })
 @Generated("jsonschema2pojo")
 public class GraphQLApiConfig implements Serializable {
 
-    @JsonProperty("graphql")
-    private Graphql graphql;
     @JsonProperty("sha")
     private String sha;
+    @JsonProperty("graphql")
+    private Graphql graphql;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 6727866780798907402L;
-
-    @JsonProperty("graphql")
-    public Graphql getGraphql() {
-        return graphql;
-    }
-
-    @JsonProperty("graphql")
-    public void setGraphql(Graphql graphql) {
-        this.graphql = graphql;
-    }
 
     @JsonProperty("sha")
     public String getSha() {
@@ -42,6 +32,16 @@ public class GraphQLApiConfig implements Serializable {
     @JsonProperty("sha")
     public void setSha(String sha) {
         this.sha = sha;
+    }
+
+    @JsonProperty("graphql")
+    public Graphql getGraphql() {
+        return graphql;
+    }
+
+    @JsonProperty("graphql")
+    public void setGraphql(Graphql graphql) {
+        this.graphql = graphql;
     }
 
     @JsonAnyGetter
