@@ -3,6 +3,7 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import com.fasterxml.jackson.annotation.*;
 
+import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +22,8 @@ import java.util.Map;
         "latitude",
         "radiusInKilometers"
 })
-public class Variables implements Serializable{
+@Generated("jsonschema2pojo")
+public class Variables implements Serializable {
 
     @JsonProperty("departureLatitude")
     private Double departureLatitude;
@@ -46,8 +48,8 @@ public class Variables implements Serializable{
     @JsonProperty("radiusInKilometers")
     private Double radiusInKilometers;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = - 1841458124451723067L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 7462103069230986666L;
 
     @JsonProperty("departureLatitude")
     public Double getDepartureLatitude() {
@@ -168,4 +170,5 @@ public class Variables implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }

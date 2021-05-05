@@ -3,6 +3,7 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import com.fasterxml.jackson.annotation.*;
 
+import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,13 +12,14 @@ import java.util.Map;
 @JsonPropertyOrder({
         "editor"
 })
-public class Settings implements Serializable{
+@Generated("jsonschema2pojo")
+public class Settings implements Serializable {
 
     @JsonProperty("editor")
     private Editor editor;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = 6949168463672915550L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 6814585677478601834L;
 
     @JsonProperty("editor")
     public Editor getEditor() {
@@ -38,4 +40,5 @@ public class Settings implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }

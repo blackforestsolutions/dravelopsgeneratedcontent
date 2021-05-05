@@ -3,6 +3,7 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import com.fasterxml.jackson.annotation.*;
 
+import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,15 +13,16 @@ import java.util.Map;
         "graphql",
         "sha"
 })
-public class GraphQLApiConfig implements Serializable{
+@Generated("jsonschema2pojo")
+public class GraphQLApiConfig implements Serializable {
 
     @JsonProperty("graphql")
     private Graphql graphql;
     @JsonProperty("sha")
     private String sha;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = - 8595616181418124189L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 6727866780798907402L;
 
     @JsonProperty("graphql")
     public Graphql getGraphql() {
@@ -33,15 +35,14 @@ public class GraphQLApiConfig implements Serializable{
     }
 
     @JsonProperty("sha")
-    public String getSha(){
+    public String getSha() {
         return sha;
     }
 
     @JsonProperty("sha")
-    public void setSha(String sha){
+    public void setSha(String sha) {
         this.sha = sha;
     }
-
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
@@ -52,4 +53,5 @@ public class GraphQLApiConfig implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }

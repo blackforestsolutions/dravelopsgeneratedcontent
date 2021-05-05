@@ -3,9 +3,9 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import com.fasterxml.jackson.annotation.*;
 
+import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -14,17 +14,18 @@ import java.util.Map;
         "settings",
         "tabs"
 })
-public class Playground implements Serializable{
+@Generated("jsonschema2pojo")
+public class Playground implements Serializable {
 
     @JsonProperty("page-title")
     private String pageTitle;
     @JsonProperty("settings")
     private Settings settings;
     @JsonProperty("tabs")
-    private List<Tab> tabs = null;
+    private Map<String, Tab> tabs;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = - 6657780933993216193L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = -891441123281508992L;
 
     @JsonProperty("page-title")
     public String getPageTitle() {
@@ -47,12 +48,12 @@ public class Playground implements Serializable{
     }
 
     @JsonProperty("tabs")
-    public List<Tab> getTabs() {
+    public Map<String, Tab> getTabs() {
         return tabs;
     }
 
     @JsonProperty("tabs")
-    public void setTabs(List<Tab> tabs) {
+    public void setTabs(Map<String, Tab> tabs) {
         this.tabs = tabs;
     }
 
@@ -65,4 +66,5 @@ public class Playground implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }

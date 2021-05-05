@@ -1,24 +1,30 @@
 
 package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
-import com.fasterxml.jackson.annotation.*;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "theme"
+    "theme"
 })
-public class Editor implements Serializable{
+@Generated("jsonschema2pojo")
+public class Editor implements Serializable
+{
 
     @JsonProperty("theme")
     private String theme;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = 3820088329272205950L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = -5969120905122194439L;
 
     @JsonProperty("theme")
     public String getTheme() {
@@ -39,4 +45,5 @@ public class Editor implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }

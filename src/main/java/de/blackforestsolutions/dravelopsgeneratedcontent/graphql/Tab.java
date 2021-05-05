@@ -3,8 +3,10 @@ package de.blackforestsolutions.dravelopsgeneratedcontent.graphql;
 
 import com.fasterxml.jackson.annotation.*;
 
+import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -19,7 +21,8 @@ import java.util.Map;
         "layers",
         "bufferInMetres"
 })
-public class Tab implements Serializable{
+@Generated("jsonschema2pojo")
+public class Tab implements Serializable {
 
     @JsonProperty("name")
     private String name;
@@ -36,12 +39,12 @@ public class Tab implements Serializable{
     @JsonProperty("maxPastDaysInCalendar")
     private Long maxPastDaysInCalendar;
     @JsonProperty("layers")
-    private String layers;
+    private List<String> layers = null;
     @JsonProperty("bufferInMetres")
     private Long bufferInMetres;
     @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = - 5534681326926075973L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 7193188579119974400L;
 
     @JsonProperty("name")
     public String getName() {
@@ -113,13 +116,14 @@ public class Tab implements Serializable{
         this.maxPastDaysInCalendar = maxPastDaysInCalendar;
     }
 
+
     @JsonProperty("layers")
-    public String getLayers() {
+    public List<String> getLayers() {
         return layers;
     }
 
     @JsonProperty("layers")
-    public void setLayers(String layers) {
+    public void setLayers(List<String> layers) {
         this.layers = layers;
     }
 
@@ -142,4 +146,5 @@ public class Tab implements Serializable{
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }
