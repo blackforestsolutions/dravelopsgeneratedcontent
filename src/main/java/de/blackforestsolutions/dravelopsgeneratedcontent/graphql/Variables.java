@@ -16,11 +16,11 @@ import java.util.Map;
         "arrivalLongitude",
         "dateTime",
         "isArrivalDateTime",
-        "language",
-        "text",
         "longitude",
         "latitude",
-        "radiusInKilometers"
+        "radiusInKilometers",
+        "text",
+        "language"
 })
 @Generated("jsonschema2pojo")
 public class Variables implements Serializable {
@@ -37,16 +37,16 @@ public class Variables implements Serializable {
     private String dateTime;
     @JsonProperty("isArrivalDateTime")
     private Boolean isArrivalDateTime;
-    @JsonProperty("language")
-    private String language;
-    @JsonProperty("text")
-    private String text;
     @JsonProperty("longitude")
     private Double longitude;
     @JsonProperty("latitude")
     private Double latitude;
     @JsonProperty("radiusInKilometers")
     private Double radiusInKilometers;
+    @JsonProperty("text")
+    private String text;
+    @JsonProperty("language")
+    private String language;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 7462103069230986666L;
@@ -111,26 +111,6 @@ public class Variables implements Serializable {
         this.isArrivalDateTime = isArrivalDateTime;
     }
 
-    @JsonProperty("language")
-    public String getLanguage() {
-        return language;
-    }
-
-    @JsonProperty("language")
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    @JsonProperty("text")
-    public String getText() {
-        return text;
-    }
-
-    @JsonProperty("text")
-    public void setText(String text) {
-        this.text = text;
-    }
-
     @JsonProperty("longitude")
     public Double getLongitude() {
         return longitude;
@@ -159,6 +139,26 @@ public class Variables implements Serializable {
     @JsonProperty("radiusInKilometers")
     public void setRadiusInKilometers(Double radiusInKilometers) {
         this.radiusInKilometers = radiusInKilometers;
+    }
+
+    @JsonProperty("text")
+    public String getText() {
+        return text;
+    }
+
+    @JsonProperty("text")
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @JsonProperty("language")
+    public String getLanguage() {
+        return language;
+    }
+
+    @JsonProperty("language")
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
     @JsonAnyGetter
