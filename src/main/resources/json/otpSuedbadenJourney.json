@@ -141,12 +141,13 @@
               },
               {
                 "distance": 350.073,
-                "relativeDirection": "CONTINUE",
-                "streetName": "Weg",
+                "relativeDirection": "CIRCLE_CLOCKWISE",
+                "streetName": "B 500 [Hinterzarten - Triberg]",
                 "absoluteDirection": "WEST",
+                "exit": "1",
                 "stayOn": false,
                 "area": false,
-                "bogusName": true,
+                "bogusName": false,
                 "lon": 8.208427,
                 "lat": 48.048346900000006,
                 "elevation": ""
