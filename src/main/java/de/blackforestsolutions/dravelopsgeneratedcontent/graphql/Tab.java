@@ -6,11 +6,10 @@ import com.fasterxml.jackson.annotation.*;
 import javax.annotation.Generated;
 import java.io.Serializable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder( {
         "name",
         "query",
         "variables",
@@ -39,7 +38,7 @@ public class Tab implements Serializable {
     @JsonProperty("maxPastDaysInCalendar")
     private Long maxPastDaysInCalendar;
     @JsonProperty("layers")
-    private List<String> layers = null;
+    private Layers layers = null;
     @JsonProperty("bufferInMetres")
     private Long bufferInMetres;
     @JsonIgnore
@@ -116,14 +115,13 @@ public class Tab implements Serializable {
         this.maxPastDaysInCalendar = maxPastDaysInCalendar;
     }
 
-
     @JsonProperty("layers")
-    public List<String> getLayers() {
+    public Layers getLayers() {
         return layers;
     }
 
     @JsonProperty("layers")
-    public void setLayers(List<String> layers) {
+    public void setLayers(Layers layers) {
         this.layers = layers;
     }
 
