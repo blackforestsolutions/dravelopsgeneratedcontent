@@ -128,8 +128,20 @@
             "intermediateStops": [],
             "steps": [
               {
-                "distance": 119.978,
+                "distance": 0.0,
                 "relativeDirection": "DEPART",
+                "streetName": "Am Großhausberg 8",
+                "absoluteDirection": "NORTH",
+                "stayOn": false,
+                "area": false,
+                "bogusName": false,
+                "lon": 8.210368261833029,
+                "lat": 48.04773979337227,
+                "elevation": ""
+              },
+              {
+                "distance": 119.978,
+                "relativeDirection": "LEFT",
                 "streetName": "Am Großhausberg",
                 "absoluteDirection": "NORTHWEST",
                 "stayOn": false,
@@ -141,12 +153,13 @@
               },
               {
                 "distance": 350.073,
-                "relativeDirection": "CONTINUE",
-                "streetName": "Weg",
+                "relativeDirection": "CIRCLE_CLOCKWISE",
+                "streetName": "B 500 [Hinterzarten - Triberg]",
                 "absoluteDirection": "WEST",
+                "exit": "1",
                 "stayOn": false,
                 "area": false,
-                "bogusName": true,
+                "bogusName": false,
                 "lon": 8.208427,
                 "lat": 48.048346900000006,
                 "elevation": ""
@@ -475,6 +488,18 @@
                 "bogusName": false,
                 "lon": 7.950171500000001,
                 "lat": 48.088571800000004,
+                "elevation": ""
+              },
+              {
+                "distance": 0.0,
+                "relativeDirection": "RIGHT",
+                "streetName": "Erwin-Sick-Straße 1",
+                "absoluteDirection": "SOUTH",
+                "stayOn": false,
+                "area": false,
+                "bogusName": false,
+                "lon": 7.9494813708519905,
+                "lat": 48.08899443542343,
                 "elevation": ""
               }
             ],
