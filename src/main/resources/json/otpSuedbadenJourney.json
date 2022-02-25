@@ -52,7 +52,7 @@
           "details": {
             "regular": [
               {
-                "fareId": "1:K",
+                "fareId": "sbg:K",
                 "price": {
                   "currency": {
                     "currency": "EUR",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "fareId": "1:K",
+                "fareId": "sbg:K",
                 "price": {
                   "currency": {
                     "currency": "EUR",
@@ -107,7 +107,7 @@
             },
             "to": {
               "name": "Furtwangen Ilbenstraße",
-              "stopId": "1:de:08326:490",
+              "stopId": "sbg:de:08326:490",
               "lon": 8.198995,
               "lat": 48.047922,
               "arrival": 1601464859000,
@@ -238,15 +238,15 @@
             "agencyUrl": "https://www.suedbadenbus.de/suedbadenbus/view/index.shtml",
             "agencyTimeZoneOffset": 7200000,
             "routeType": 3,
-            "routeId": "1:7-272-j1j-1",
+            "routeId": "sbg:7-272-j1j-1",
             "interlineWithPreviousLeg": false,
             "headsign": "Furtwangen Hinterbreg",
-            "agencyId": "99999",
-            "tripId": "1:100.T0.7-272-j1j-1.30.R",
+            "agencyId": "sbg:99999",
+            "tripId": "sbg:100.T0.7-272-j1j-1.30.R",
             "serviceDate": "20200930",
             "from": {
               "name": "Furtwangen Ilbenstraße",
-              "stopId": "1:de:08326:490",
+              "stopId": "sbg:de:08326:490",
               "lon": 8.198995,
               "lat": 48.047922,
               "arrival": 1601464859000,
@@ -258,7 +258,7 @@
             },
             "to": {
               "name": "Bleibach SEV",
-              "stopId": "1:de:08316:11560:1",
+              "stopId": "sbg:de:08316:11560:1",
               "lon": 7.998644,
               "lat": 48.127233,
               "arrival": 1601467500000,
@@ -281,7 +281,7 @@
             "intermediateStops": [
               {
                 "name": "Gütenbach Rathaus",
-                "stopId": "1:de:08326:482",
+                "stopId": "sbg:de:08326:482",
                 "lon": 8.138826,
                 "lat": 48.044378,
                 "arrival": 1601465460000,
@@ -293,7 +293,7 @@
               },
               {
                 "name": "Simonswald Rathaus",
-                "stopId": "1:de:08316:462",
+                "stopId": "sbg:de:08316:462",
                 "lon": 8.056936,
                 "lat": 48.100225,
                 "arrival": 1601466720000,
@@ -320,15 +320,15 @@
             "agencyUrl": "https://www.suedbadenbus.de/suedbadenbus/view/index.shtml",
             "agencyTimeZoneOffset": 7200000,
             "routeType": 3,
-            "routeId": "1:7-201-j1j-1",
+            "routeId": "sbg:7-201-j1j-1",
             "interlineWithPreviousLeg": false,
             "headsign": "Bleibach Stollen",
-            "agencyId": "99999",
-            "tripId": "1:32.T0.7-201-j1j-1.10.H",
+            "agencyId": "sbg:99999",
+            "tripId": "sbg:32.T0.7-201-j1j-1.10.H",
             "serviceDate": "20200930",
             "from": {
               "name": "Bleibach SEV",
-              "stopId": "1:de:08316:11560:1",
+              "stopId": "sbg:de:08316:11560:1",
               "lon": 7.998644,
               "lat": 48.127233,
               "arrival": 1601467500000,
@@ -340,7 +340,7 @@
             },
             "to": {
               "name": "Waldkirch Kastelberghalle",
-              "stopId": "1:de:08316:811",
+              "stopId": "sbg:de:08316:811",
               "lon": 7.952947,
               "lat": 48.090458,
               "arrival": 1601468940000,
@@ -363,7 +363,7 @@
             "intermediateStops": [
               {
                 "name": "Kollnau Bf (Bus)",
-                "stopId": "1:de:08316:6533:4",
+                "stopId": "sbg:de:08316:6533:4",
                 "lon": 7.972467,
                 "lat": 48.101665,
                 "arrival": 1601468520000,
@@ -375,7 +375,7 @@
               },
               {
                 "name": "Waldkirch Stadtmitte",
-                "stopId": "1:de:08316:846",
+                "stopId": "sbg:de:08316:846",
                 "lon": 7.961104,
                 "lat": 48.093896,
                 "arrival": 1601468760000,
@@ -402,7 +402,7 @@
             "interlineWithPreviousLeg": false,
             "from": {
               "name": "Waldkirch Kastelberghalle",
-              "stopId": "1:de:08316:811",
+              "stopId": "sbg:de:08316:811",
               "lon": 7.952947,
               "lat": 48.090458,
               "arrival": 1601468940000,

@@ -60,7 +60,7 @@
             },
             "to": {
               "name": "Universität",
-              "stopId": "1:247103",
+              "stopId": "rnv:247103",
               "platformCode": "C",
               "lon": 8.4633481,
               "lat": 49.4821881,
@@ -192,16 +192,16 @@
             "agencyTimeZoneOffset": 7200000,
             "routeColor": "E30613",
             "routeType": 0,
-            "routeId": "1:4",
+            "routeId": "rnv:4",
             "routeTextColor": "FFFFFF",
             "interlineWithPreviousLeg": false,
             "headsign": "LU Hauptbahnhof",
-            "agencyId": "19",
-            "tripId": "1:4-280-4004-89100",
+            "agencyId": "rnv:19",
+            "tripId": "rnv:4-280-4004-89100",
             "serviceDate": "20201005",
             "from": {
               "name": "Universität",
-              "stopId": "1:247103",
+              "stopId": "rnv:247103",
               "platformCode": "C",
               "lon": 8.4633481,
               "lat": 49.4821881,
@@ -214,7 +214,7 @@
             },
             "to": {
               "name": "Berliner Platz",
-              "stopId": "1:206602",
+              "stopId": "rnv:206602",
               "platformCode": "B",
               "lon": 8.45065,
               "lat": 49.48049,
@@ -238,7 +238,7 @@
             "intermediateStops": [
               {
                 "name": "Konrad-Adenauer-Br.",
-                "stopId": "1:242602",
+                "stopId": "rnv:242602",
                 "platformCode": "B",
                 "lon": 8.4585767,
                 "lat": 49.4823922,
@@ -266,7 +266,7 @@
             "interlineWithPreviousLeg": false,
             "from": {
               "name": "Berliner Platz",
-              "stopId": "1:206602",
+              "stopId": "rnv:206602",
               "platformCode": "B",
               "lon": 8.45065,
               "lat": 49.48049,
