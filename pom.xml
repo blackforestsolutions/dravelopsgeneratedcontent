@@ -6,7 +6,7 @@
 
     <groupId>de.blackforestsolutions</groupId>
     <artifactId>dravelopsgeneratedcontent</artifactId>
-    <version>3.6.0</version>
+    <version>3.6.1</version>
 
     <properties>
         <!-- Maven Dependencies -->
@@ -56,6 +56,16 @@
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <!--Generate XML Sources-->
             <!--
